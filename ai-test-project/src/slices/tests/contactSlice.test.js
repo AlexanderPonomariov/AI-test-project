@@ -1,4 +1,4 @@
-import reducer, { setField, submitData, cleanData } from './contactSlice';
+import reducer, { setField, submitData, cleanData } from '../contactSlice';
 
 describe('contactSlice', () => {
   // Test initial state
