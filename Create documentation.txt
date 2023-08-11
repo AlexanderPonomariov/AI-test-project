@@ -1,0 +1,44 @@
+User
+Generate README.md file for react app with the form for getting `first_name`, `last_name`, `email`,and `message`. All fields are validated. Result displayed as a table with all values. 2 paragraphs, 4-10 Sentences.
+
+And also add Information on how to install/run the developed application locally.
+
+ChatGPT
+React Contact Form Application
+This is a simple React application that provides a contact form where users can enter their first_name, last_name, email, and a message. Upon submission, the details are validated to ensure that each field is correctly filled out. After a successful submission, the user's details are displayed in a table format below the form.
+
+The primary purpose of this application is to showcase the integration of a form in a React application, demonstrate form validation, and present the submitted data in a neat table format. Whether you're a beginner trying to understand the basics of form handling in React or a developer looking to integrate a similar feature, this repository provides a straightforward implementation.
+
+Installation and Running Locally
+To get this application up and running on your local machine, follow the steps below:
+
+Clone the Repository
+
+bash
+Copy code
+git clone https://github.com/your-repository-url/react-contact-form.git
+cd react-contact-form
+Install Dependencies
+
+Make sure you have Node.js and npm installed. Then, run:
+
+bash
+Copy code
+npm install
+Start the Development Server
+
+bash
+Copy code
+npm start
+This command starts the development server, and the application should automatically open in your default browser. If not, visit http://localhost:3000 in your browser.
+
+Build for Production (Optional)
+
+If you want to build the app for production, use the following command:
+
+bash
+Copy code
+npm run build
+This will create a build directory with all the compiled assets.
+
+We hope you find this project useful and encourage contributions to enhance its features.
