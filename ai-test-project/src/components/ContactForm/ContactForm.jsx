@@ -16,7 +16,7 @@ function ContactForm() {
     if (!formData.firstName.trim()) newErrors.firstName = 'First Name is required';
     if (!formData.lastName.trim()) newErrors.lastName = 'Last Name is required';
     if (!validator.isEmail(formData.email)) newErrors.email = 'Enter a valid email';
-    if (!formData.message.trim()) newErrors.message = 'Message is required';
+    if (formData.message.trim().length < 10) newErrors.message = 'Message should be more than 10 characters';
 
     setErrors(newErrors);
   };
