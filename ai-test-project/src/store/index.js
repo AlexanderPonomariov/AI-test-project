@@ -1,8 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import formSlice from '../slices/formSlice';
+import contactReducer from '../slices/contactSlice';
 
-export default configureStore({
+const store = configureStore({
   reducer: {
-    formSlice,
+    contact: contactReducer,
   },
 });
+
+export default store;
