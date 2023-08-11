@@ -6,7 +6,7 @@ const initialState = {
   lastName: '',
   email: '',
   message: '',
-  submittedData: [],
+  submittedData: {},
 };
 
 const contactSlice = createSlice({
@@ -24,8 +24,11 @@ const contactSlice = createSlice({
         message: state.message,
       };
     },
+    cleanData: (state) => {
+      state.submittedData = {};
+    },
   },
 });
 
-export const { setField, submitData } = contactSlice.actions;
+export const { setField, submitData, cleanData } = contactSlice.actions;
 export default contactSlice.reducer;

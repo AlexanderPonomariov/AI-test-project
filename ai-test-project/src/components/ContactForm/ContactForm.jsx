@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import validator from 'validator';
-import { setField, submitData } from '../../slices/contactSlice';
+import { setField, submitData, cleanData } from '../../slices/contactSlice';
 
 function ContactForm() {
   const formData = useSelector((state) => state.contact);
@@ -34,6 +34,7 @@ function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    dispatch(cleanData());
     setIsSubmitted(true);
     if (isFormValid()) {
       dispatch(submitData());
@@ -90,7 +91,7 @@ function ContactForm() {
         {isSubmitted && errors.message && <div className="error">{errors.message}</div>}
       </div>
 
-      <button type="submit" disabled={!isFormValid()}>Submit</button>
+      <button type="submit" disabled={isSubmitted && !isFormValid()}>Submit</button>
     </form>
   );
 }
